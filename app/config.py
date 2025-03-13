@@ -19,10 +19,5 @@ class Settings(BaseSettings):
 settings = Settings()
 
 
-def get_db_url():
-    return f"postgresql+asyncpg://{settings.DB_USER}:{settings.DB_PASSWORD}@{settings.DB_HOST}:{settings.DB_PORT}/{settings.DB_NAME}"
-
-
-# Получение DB_URL для докера:
 def get_docker_db_url():
     return f"postgresql+asyncpg://{settings.DB_USER}:{settings.DB_PASSWORD}@{settings.DOCKER_DB_HOST}:{settings.DOCKER_DB_PORT}/{settings.DB_NAME}"

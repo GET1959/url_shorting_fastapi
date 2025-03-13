@@ -5,7 +5,7 @@ from sqlalchemy import func
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncAttrs
 from sqlalchemy.orm import DeclarativeBase, declared_attr, mapped_column, Mapped
 
-from app.config import get_db_url, get_docker_db_url
+from app.config import get_docker_db_url
 
 DATABASE_URL = get_docker_db_url()
 
